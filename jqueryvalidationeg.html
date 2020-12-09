@@ -1,0 +1,125 @@
+<html>
+<head>
+    <title>
+        Jquery
+    </title>
+
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script> 
+
+        $(document).ready(function(){
+
+            $('#submit').click(function(){
+
+                if($('#first-name').val()=="")
+                {
+                    $('#nameVal').html("please enter your first name");
+                    return false;
+                }     
+
+                if($('#last-name').val()=="")
+                {
+                    $('#lastnameVal').html("please enter your last name");
+                    return false;                    
+                }
+
+                if($('#email').val()=="")
+                {
+                    $('#emailVal').html("please enter your email");
+                    return false; 
+                }
+
+                if($('#password').val()=="")
+                {
+                    $('#passwordVal').html("please enter your password");
+                    return false;
+                }
+
+                if($('#confirm-password').val()!= $('#password').val())
+                {
+                    $('#cPasswordVal').html("make sure you have typed the same password");
+                    return false;
+                }
+
+                if(!$('#male').is(':checked') && !$('#female').is(':checked'))
+                {
+                    $('#genderVal').html("please select a gender");
+                    return false;
+                }
+               
+
+                if($('#country').val()=="0")
+                {
+                    $('#countryVal').html("please select a country");
+                    return false;
+                }
+                if(!$('#tamil').is(':checked') || !$('#english').is(':checked'))
+                {
+                    $('#lanerror').html("please choose language");
+                    return false;
+                }
+                
+                                
+            });
+
+        });          
+        
+        
+        
+    </script>
+
+    
+
+</head>
+
+<body>
+
+<form>
+    <div>
+        <label>Name </label>
+        <input type="text" placeholder="first name" name="first name" id="first-name"/><span id="nameVal"></span>
+        <input type="text" placeholder="last name" name="last name" id="last-name"/><span id="lastfnameVal"></span>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" placeholder="email" name="email" id="email"/><span id="emailVal"></span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="Password" placeholder="password" name="password" id="password"/><span id="passwordVal"></span>
+    </div>
+    <div>
+        <label>Confirm Password </label>
+        <input type="Password" placeholder="confrim password" name="confirm-password" id="confirm-password"/><span id="cPasswordVal"></span>
+    </div>
+    <div>
+        <label>Gender</label>
+            Male <input type="radio" name="gender" id="male"/>
+            female <input type="radio" name="gender" id="female"/><span id="genderVal"> </span>
+    </div>
+    <div>
+        <label> country </label>
+        <select id="country">
+            <option value="0">select</option>
+            <option value="1">India</option>
+            <option value="2">U.S.A</option>
+            <option value="3">U.K</option>
+        </select> <span id="countryVal"> </span>
+    </div>
+    <div>
+        <label>Language</label>
+        Tamil <input type="checkbox" name="language" id="tamil"/>            
+        English <input type="checkbox" name="language" id="english"/>
+        <span id="lanerror"> </span>
+    </div>
+    <div>
+    <input type="submit" value="submit" id="submit" />
+    <input type="reset" value="reset" id="reset"/>
+    </div>
+
+</form>        
+
+</body>
+
+</html>

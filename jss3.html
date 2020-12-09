@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title> js3 </title>   
+        <script type="text/javascript">
+
+        function nameValidation(ele){
+           
+            if(ele.value==""){
+                document.getElementById('nameVal').innerHTML="please enter your name";
+                ele.focus();
+                return false;
+                
+            }    
+         return true;
+        }
+
+        function emailVaildation(ele){
+
+            if(ele.value==""){
+                document.getElementById('emailVal').innerHTML="please enter your email Id";
+                return false;
+            }
+        }
+
+        function passwordValidation(ele){
+
+            if(ele.value==""){
+                document.getElementById('passwordVal').innerHTML="please enter your password";
+                return false;
+            }
+        }
+
+        function conuntryValidate(ele){
+
+            alert(this.value);    
+
+        }
+
+            
+        }
+
+        
+
+        
+
+
+        
+
+        
+
+        
+        </script>
+
+        <style>
+            .error{
+                color: red;
+            }
+        </style>
+     
+    </head>
+
+    <body>
+
+    <form>
+        <div>
+            <label>Name </label>
+            <input type="text" placeholder="first name" name="first name" id="first-name" onBlur="return nameValidation(this)"/><span class="error" id="nameVal"></span>
+            <input type="text" placeholder="last name" name="last name" id="last-name" onBlur="nameValidation(this)"/><span class="error" id="nameVal"></span>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" placeholder="email" name="email" id="email" onBlur="emailVaildation(this)"/><span class="error" id="emailVal"></span> 
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="Password" placeholder="password" name="password" id="password" onBlur="passwordValidation(this)" /><span class="error" id="passwordVal"></span>
+        </div>
+        <div>
+            <label>Confirm Password </label>
+            <input type="Password" placeholder="confrim password" name="confirm-password" id="confirm-password"/>
+        </div>
+        <div>
+            <label>Gender</label>
+                Male <input type="radio" name="gender" id="male"/>
+                female <input type="radio" name="gender" id="female"/>
+        </div>
+        <div>
+            <label> country </label>
+            <select id="country" onChange="countryValidate(this)"> 
+                <option value="0">select</option>
+                <option value="1">India</option>
+                <option value="2">U.S.A</option>
+                <option value="3">U.K</option>
+            </select> 
+        </div>
+        <div>
+            <label>Language</label>
+            Tamil <input type="checkbox" name="language" id="tamil"/>            
+            English <input type="checkbox" name="language" id="english"/>
+        </div>
+        <div>
+        <input type="submit" value="submit" id="submit" onClick="return validate()"/>
+        <input type="reset" value="reset" id="reset"/>
+        </div>
+
+    </form>        
+
+    </body>
+
+<html>

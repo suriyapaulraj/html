@@ -1,0 +1,23 @@
+#header{
+    border: 1px solid; min-height: 120px;
+}
+
+#logo{
+    width: 120px; height: 110px; float: left;
+}
+
+#login{
+    float: right; width: 480px; margin-top: 40px;
+}
+
+#body-left{
+    border: 1px solid; min-height:500px; width:49%; float: left;
+}
+
+#body-right{
+    border: 1px solid; min-height:600px; width:50%; float: right;
+}
+
+#footer{
+    border: 1px solid; width:100%; height: 30px; text-align: center;
+}

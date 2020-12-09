@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> jss2</title>
+
+        <script type="text/javascript">
+
+        function keypress(ele,e){
+
+            alert(ele.value);
+            console.log(ele);
+            if(e.keyCode >=48 && e.keyCode<=57)
+            {
+                return true;
+            }
+            else{
+                alert("please enter a number");
+            }
+
+        }
+
+        function keyup(ele,e){
+
+
+            alert(ele.value)
+            if(e.keyCode >=47 && e.keyCode<=57)
+            {
+                return true;
+            }
+            else{
+                alert("please enter a number");
+            }
+
+
+        }
+
+
+
+        </script>
+
+    </head>
+
+    <body>
+        Age<input type="text" onkeypress= "keypress(this)">
+        Age<input type="text" onkeyup= "keyup(this)">
+  
+    </body>
+
+</html>

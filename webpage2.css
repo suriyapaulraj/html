@@ -1,0 +1,27 @@
+#left-block{
+    height: 100%; width: 33.33%; float: left; background-color: #aaa; 
+}
+
+#logo{
+   height: 100px; width: 100px; padding: 1%;
+}
+
+.menu{
+    text-align: center;
+}
+
+#center-block{
+   height: 100%; width: 33.33%; background-color: #bbb; float: left;
+}
+
+#right-block{
+    height: 100%; width: 33.33%; float: left; background-color: #ccc; 
+}
+
+#para{
+    padding: 5%
+}
+
+.list{
+    text-align: center;
+}

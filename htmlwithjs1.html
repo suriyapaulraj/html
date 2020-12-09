@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title> sample </title>   
+        <script type="text/javascript">
+        function validate(){
+           
+            if(document.getElementById("first-name").value=="")
+            {
+                alert("please enter first name");
+                return false;
+            }
+
+            if(document.getElementById("last-name").value=="")
+            {
+                alert("please enter last name");
+                return false;
+            }
+
+            if(document.getElementById("email").vlaue=="")
+            {
+                alert("please enter you email id");
+                return flase;
+            }
+
+            if(document.getElementById("password").value=="")
+            {
+                alert("please enter a password");
+                return false;
+            }
+            
+            if(document.getElementById("confirm-password").value=="")
+            {
+                alert("please confirm your password");
+                return false;
+            }
+
+            if(document.getElementById("confirm-password").value!= document.getElementById("password").value)
+            {
+                alert("your confirmed password is incorrect!")
+                return false;
+            }
+
+            if(document.getElementById("first-name").value=="0")
+            {
+                alert("please select a country");
+                return false;
+            }
+
+            if(document.getElementById("male").checked==false&&document.getElementById("female").checked==false)
+            {
+                alert("please specif your gender");
+                return false;
+            }
+
+
+        }
+        </script>
+     
+    </head>
+
+    <body>
+
+    <form>
+        <div>
+            <label>Name </label>
+            <input type="text" placeholder="first name" name="first name" id="first-name"/>
+            <input type="text" placeholder="last name" name="last name" id="last-name"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="text" placeholder="email" name="email" id="email"/>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="Password" placeholder="password" name="password" id="password"/>
+        </div>
+        <div>
+            <label>Confirm Password </label>
+            <input type="Password" placeholder="confrim password" name="confirm-password" id="confirm-password"/>
+        </div>
+        <div>
+            <label>Gender</label>
+                Male <input type="radio" name="gender" id="male"/>
+                female <input type="radio" name="gender" id="female"/>
+        </div>
+        <div>
+            <label> country </label>
+            <select id="country">
+                <option value="0">select</option>
+                <option value="1">India</option>
+                <option value="2">U.S.A</option>
+                <option value="3">U.K</option>
+            </select> 
+        </div>
+        <div>
+            <label>Language</label>
+            Tamil <input type="checkbox" name="language" id="tamil"/>            
+            English <input type="checkbox" name="language" id="english"/>
+        </div>
+        <div>
+        <input type="submit" value="submit" id="submit" onClick="return validate()"/>
+        <input type="reset" value="reset" id="reset"/>
+        </div>
+
+    </form>        
+
+    </body>
+
+<html>
