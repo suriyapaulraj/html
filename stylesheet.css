@@ -1,0 +1,10 @@
+h1{
+    margin: 10px 10px 10px 10px;
+}
+body{
+    background-color: blue;
+}
+p{
+    margin: 10px 10px 10px 10px;
+    border: 2px solid black;
+}
